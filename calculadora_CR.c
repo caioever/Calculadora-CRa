@@ -35,22 +35,20 @@ int main() {
       
          
      while((fgets(buf,100,fp)!=NULL) && (i<MAX_LINE)) {
-     	
-     	
         pstr = strtok(buf,":");
         vetReg[i].notas = atof(pstr);
-        
+        vetReg[i].horas = atoi(pstr);
+
         pstr = strtok(NULL,":");
-        vetReg[i].horas = atoi(pstr); 
-        
+
         crsomacima+= vetReg[i].notas * vetReg[i].horas;
         crsomabaixo+=vetReg[i].horas;
 
         ++i;
     }
-    
+
     cra = crsomacima / crsomabaixo;
-  
+
     fclose(fp);
 
     localtime = time(NULL);
