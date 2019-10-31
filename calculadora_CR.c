@@ -11,7 +11,7 @@ typedef struct reg {
 
 #define MAX_LINE 100
 
-main() {
+int main() {
 
     FILE *fp;
     char buf[100];
@@ -54,19 +54,19 @@ main() {
     fclose(fp);
 
     localtime = time(NULL);
-    printf(ctime(&localtime));
+    printf("%s", ctime(&localtime));
     printf("\n");
 
     printf("%s%10s\n","Notas","Horas");
     printf("%s%10s\n","------","-------");
     
 	cont++;
-	printf("\n %d� Periodo\n",cont);
+	printf("\n %dº Período\n",cont);
     for(j=0; j<i; j++) { 
 	   if(vetReg[j].notas==0.0)
 	   {
 	   		cont++;
-	   		printf("\n %d� Periodo\n",cont);
+	   		printf("\n %dº Período\n",cont);
 	   }
 	   else
 	   {
@@ -75,7 +75,8 @@ main() {
 	   }
     }
     printf("----------------------------------------------\n");
-    printf("%42s%.2f\n","CRa: ",cra ,"\n");
+    printf("%42s%.2f\n","CRa: ",cra);
+    printf("\n");
     
 	system("pause");
 	return 0;
