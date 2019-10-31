@@ -1,6 +1,10 @@
 # Calculadora-CRa
 Uma simples calculadora de CR(coeficiente de rendimento) em C
 
+## Introdução
+
+O CRa é calculado com as médias de cada materia, multiplicado pelas horas que a matéria tem e dividido pela soma das horas.
+
 Um exemplo de como os dados são coletados:
 
 (10.0:60 
@@ -17,4 +21,8 @@ Um exemplo de como os dados são coletados:
 10.0:60
 10.0:60
 
-O CRa é calculado com as médias de cada materia, multiplicado pelas horas que a matéria tem e dividido pela soma das horas.
+## Como compilar
+
+```
+$ gcc calculadora_CR.c -o calculadora_CR
+```
